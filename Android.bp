@@ -27,7 +27,15 @@ android_library {
         "SettingsLib-search-defaults",
     ],
 
-    srcs: ["src/**/*.java"],
+    srcs: ["src/**/*.java",
+           "BobaSettings/src/**/*.java",
+    ],
+
+    aaptflags: ["--extra-packages com.legion.settings"],
+
+    resource_dirs: ["res",
+                    "BobaSettings/res"
+    ],
 
     static_libs: [
         "androidx-constraintlayout_constraintlayout",

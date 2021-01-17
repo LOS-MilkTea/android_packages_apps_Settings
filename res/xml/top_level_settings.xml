@@ -39,6 +39,14 @@
         settings:controller="com.android.settings.connecteddevice.TopLevelConnectedDevicesPreferenceController"/>
 
     <Preference
+	android:key="boba_settings" 
+        android:title="@string/boba_settings_title" 
+        android:summary="@string/boba_settings_summary" 
+        android:icon="@drawable/ic_homepage_boba" 
+        android:order="-105"
+        android:fragment="com.boba.settings.BobaSettings" />
+
+    <Preference
         android:key="top_level_apps_and_notifs"
         android:title="@string/app_and_notification_dashboard_title"
         android:summary="@string/app_and_notification_dashboard_summary"

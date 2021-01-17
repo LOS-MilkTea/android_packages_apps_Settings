@@ -3424,6 +3424,19 @@
                 <action android:name="com.android.settings.action.LAUNCH_BLUETOOTH_PAIRING"/>
             </intent-filter>/>
         </receiver>
+        
+        <!-- BobaSettings -->
+        <activity android:name=".Settings$BobaSettingsActivity"
+            android:label="@string/boba_settings_title"
+            android:icon="@drawable/ic_homepage_boba"
+	 	android:parentActivityName="com.android.settings">
+		<intent-filter android:priority="69">
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.android.settings.SHORTCUT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.boba.settings.BobaSettings" />
+        </activity>
 
         <activity android:name=".backup.transport.TransportActivity"
                   android:label="@string/backup_transport_title"
